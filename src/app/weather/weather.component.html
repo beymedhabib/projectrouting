@@ -1,0 +1,26 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control" [formControl]="city" placeholder="CITY" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="weather()">scherch</button>
+    </div>
+  </div>
+  <div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="weather-card one"  *ngIf='wather'>
+				<div class="top">
+					<div class="wrapper">
+						<h1 class="heading">{{wather.current.weather_descriptions}}</h1>
+						<h3 class="location">{{wather.request.query}}</h3>
+						<p class="temp">
+							<span class="temp-value">{{wather.current.temperature}}</span>
+							<span class="deg">0</span>
+							<a href="javascript:;"><span class="temp-type">C</span></a>
+						</p>
+					</div>
+				</div>
+				
+			</div>
+        </div>
+    </div>
+  </div>
